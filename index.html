@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noto Sans CJK Font Glyph Comparison</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&family=Noto+Sans+SC&family=Noto+Sans+HK&family=Noto+Sans+JP&family=Noto+Sans+KR&family=Noto+Sans&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .mdc-typography--headline3 {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+        .comparison {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .font-sample {
+            width: 30%;
+            min-width: 250px;
+            margin-bottom: 20px;
+        }
+        .mdc-card {
+            padding: 16px;
+        }
+        .mdc-typography--headline6 {
+            text-align: center;
+            margin-bottom: 16px;
+        }
+        .sample-text {
+            font-size: 18px;
+            margin-bottom: 16px;
+        }
+        .input-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        #user-input {
+            width: 80%;
+            max-width: 600px;
+            padding: 8px;
+            font-size: 16px;
+        }
+        .zh-tc{
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+        .zh-sc{
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+        .zh-hk{
+            font-family: 'Noto Sans HK', sans-serif;
+        }
+        .ja {
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+        .ko {
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+        .cjk {
+            font-family: 'Noto Sans', sans-serif;
+        }
+        .nine-grid {
+            width: 200px;
+            height: 200px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            border: 1px solid #ccc;
+            margin: 0 auto 16px;
+        }
+        .nine-grid::before {
+            content: '';
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            background:
+                linear-gradient(to right, #ccc 1px, transparent 1px) 0 0,
+                linear-gradient(to bottom, #ccc 1px, transparent 1px) 0 0;
+            background-size: 66px 66px;
+        }
+        .user-text {
+            grid-column: 1 / -1;
+            grid-row: 1 / -1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 150px;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body class="mdc-typography">
+    <h1 class="mdc-typography--headline3">Noto Sans CJK Font Glyph Comparison</h1>
+    
+    <div class="input-container">
+        <input type="text" id="user-input" placeholder="Type your text here" class="mdc-outlined-text-field__input" maxlength="1">
+    </div>
+
+    <div class="comparison">
+        <div class="font-sample">
+            <div class="mdc-card">
+                <h2 class="mdc-typography--headline6">Noto Sans TC</h2>
+                <div class="nine-grid">
+                    <div class="user-text zh-tc"></div>
+                </div>
+                <p class="sample-text mdc-typography--body1 zh-tc">
+                    這是繁體中文示例文字。<br>
+                    The quick brown fox jumps over the lazy dog.
+                </p>
+            </div>
+        </div>
+        <div class="font-sample">
+            <div class="mdc-card">
+                <h2 class="mdc-typography--headline6">Noto Sans SC</h2>
+                <div class="nine-grid">
+                    <div class="user-text zh-sc"></div>
+                </div>
+                <p class="sample-text mdc-typography--body1 zh-sc">
+                    这是简体中文示例文字。<br>
+                    The quick brown fox jumps over the lazy dog.
+                </p>
+            </div>
+        </div>
+        <div class="font-sample">
+            <div class="mdc-card">
+                <h2 class="mdc-typography--headline6">Noto Sans HK</h2>
+                <div class="nine-grid">
+                    <div class="user-text zh-hk"></div>
+                </div>
+                <p class="sample-text mdc-typography--body1 zh-hk">
+                    這是香港繁體中文示例文字。<br>
+                    The quick brown fox jumps over the lazy dog.
+                </p>
+            </div>
+        </div>
+        <div class="font-sample">
+            <div class="mdc-card">
+                <h2 class="mdc-typography--headline6">Noto Sans JP</h2>
+                <div class="nine-grid">
+                    <div class="user-text ja"></div>
+                </div>
+                <p class="sample-text mdc-typography--body1 ja">
+                    これは日本語のサンプルテキストです。<br>
+                    The quick brown fox jumps over the lazy dog.
+                </p>
+            </div>
+        </div>
+        <div class="font-sample">
+            <div class="mdc-card">
+                <h2 class="mdc-typography--headline6">Noto Sans KR</h2>
+                <div class="nine-grid">
+                    <div class="user-text ko"></div>
+                </div>
+                <p class="sample-text mdc-typography--body1 ko">
+                    이것은 한국어 샘플 텍스트입니다.<br>
+                    The quick brown fox jumps over the lazy dog.
+                </p>
+            </div>
+        </div>
+        <div class="font-sample">
+            <div class="mdc-card">
+                <h2 class="mdc-typography--headline6">Noto Sans CJK</h2>
+                <div class="nine-grid">
+                    <div class="user-text cjk"></div>
+                </div>
+                <p class="sample-text mdc-typography--body1 cjk">
+                    這是CJK示例文字 / 这是CJK示例文字<br>
+                    これはCJKサンプルテキストです / CJK 샘플 텍스트입니다<br>
+                    The quick brown fox jumps over the lazy dog.
+                </p>
+            </div>
+        </div>
+    </div>
+    <script>
+        mdc.autoInit();
+
+        const userInput = document.getElementById('user-input');
+        const userTextSpans = document.querySelectorAll('.user-text');
+
+        userInput.addEventListener('input', function() {
+            userTextSpans.forEach(span => {
+                span.textContent = this.value;
+            });
+        });
+    </script>
+</body>
+</html>
