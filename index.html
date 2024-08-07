@@ -113,7 +113,22 @@
             width: fit-content;
             margin: 0 auto;
         }
-    </style>
+        .font-row{
+            padding:16px;
+        }
+        .font-sample-content {
+            display: flex;
+            flex-direction: row;
+        }
+        .mdc-typography--headline6 {
+            width: 50%;
+            display: flex;
+            align-items: center;
+        }
+        .sample-text {
+            width: 50%;
+        }
+        </style>
 </head>
 <body class="mdc-typography">
     <h1 class="mdc-typography--headline3">Noto Sans CJK Font Glyph Comparison</h1>
@@ -164,6 +179,30 @@
             </div>
         </div>
     </div>
+    <div class="font-slider">
+        <div class="mdc-slider mdc-slider--discrete mdc-slider--tick-marks" data-mdc-auto-init="MDCSlider">
+            <input class="mdc-slider__input" type="range" min="12" max="72" value="24" name="volume" aria-label="Font size" id="font-size-slider">
+            <div class="mdc-slider__track">
+                <div class="mdc-slider__track--inactive"></div>
+                <div class="mdc-slider__track--active">
+                    <div class="mdc-slider__track--active_fill"></div>
+                </div>
+                <div class="mdc-slider__tick-marks">
+                    <div class="mdc-slider__tick-mark--active"></div>
+                    <div class="mdc-slider__tick-mark--inactive"></div>
+                </div>
+            </div>
+            <div class="mdc-slider__thumb">
+                <div class="mdc-slider__value-indicator-container" aria-hidden="true">
+                    <div class="mdc-slider__value-indicator">
+                        <span class="mdc-slider__value-indicator-text">24</span>
+                    </div>
+                </div>
+                <div class="mdc-slider__thumb-knob"></div>
+            </div>
+        </div>
+        <label for="font-size-slider" class="mdc-typography--body2">Font Size: <span id="font-size-value">24</span>px</label>
+    </div>
 
     <div class="comparison">
         <div class="font-sample">
@@ -173,10 +212,6 @@
                     <div class="user-text zh-tc">連</div>
                 </div>
                 <div class="user-text2 zh-tc">國破山河在</div>
-                <p class="sample-text mdc-typography--body1 zh-tc">
-                    這是繁體中文示例文字。<br>
-                    The quick brown fox jumps over the lazy dog.
-                </p>
             </div>
         </div>
         <div class="font-sample">
@@ -186,10 +221,6 @@
                     <div class="user-text zh-sc">連</div>
                 </div>
                 <div class="user-text2 zh-sc">國破山河在</div>
-                <p class="sample-text mdc-typography--body1 zh-sc">
-                    这是简体中文示例文字。<br>
-                    The quick brown fox jumps over the lazy dog.
-                </p>
             </div>
         </div>
         <div class="font-sample">
@@ -199,10 +230,6 @@
                     <div class="user-text zh-hk">連</div>
                 </div>
                 <div class="user-text2 zh-hk">國破山河在</div>
-                <p class="sample-text mdc-typography--body1 zh-hk">
-                    這是香港繁體中文示例文字。<br>
-                    The quick brown fox jumps over the lazy dog.
-                </p>
             </div>
         </div>
         <div class="font-sample">
@@ -212,10 +239,6 @@
                     <div class="user-text ja">連</div>
                 </div>
                 <div class="user-text2 ja">國破山河在</div>
-                <p class="sample-text mdc-typography--body1 ja">
-                    これは日本語のサンプルテキストです。<br>
-                    The quick brown fox jumps over the lazy dog.
-                </p>
             </div>
         </div>
         <div class="font-sample">
@@ -225,10 +248,6 @@
                     <div class="user-text ko">連</div>
                 </div>
                 <div class="user-text2 ko">國破山河在</div>
-                <p class="sample-text mdc-typography--body1 ko">
-                    이것은 한국어 샘플 텍스트입니다.<br>
-                    The quick brown fox jumps over the lazy dog.
-                </p>
             </div>
         </div>
         <div class="font-sample">
@@ -238,6 +257,69 @@
                     <div class="user-text cjk">連</div>
                 </div>
                 <div class="user-text2 cjk">國破山河在</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="font-row">
+        <div class="mdc-card">
+            <div class="font-sample-content">
+                <h2 class="mdc-typography--headline6">Noto Sans TC</h2>
+                <p class="sample-text mdc-typography--body1 zh-tc">
+                    這是繁體中文示例文字。<br>
+                    The quick brown fox jumps over the lazy dog.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="font-row">
+        <div class="mdc-card">
+            <div class="font-sample-content">
+                <h2 class="mdc-typography--headline6">Noto Sans SC</h2>
+                <p class="sample-text mdc-typography--body1 zh-sc">
+                    这是简体中文示例文字。<br>
+                    The quick brown fox jumps over the lazy dog.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="font-row">
+        <div class="mdc-card">
+            <div class="font-sample-content">
+                <h2 class="mdc-typography--headline6">Noto Sans HK</h2>
+                <p class="sample-text mdc-typography--body1 zh-hk">
+                    這是繁體中文示例文字。<br>
+                    The quick brown fox jumps over the lazy dog.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="font-row">
+        <div class="mdc-card">
+            <div class="font-sample-content">
+                <h2 class="mdc-typography--headline6">Noto Sans JP</h2>
+                <p class="sample-text mdc-typography--body1 ja">
+                    これは日本語のサンプルテキストです。<br>
+                    The quick brown fox jumps over the lazy dog.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="font-row">
+        <div class="mdc-card">
+            <div class="font-sample-content">
+                <h2 class="mdc-typography--headline6">Noto Sans KR</h2>
+                <p class="sample-text mdc-typography--body1 ko">
+                    이것은 한국어 샘플 텍스트입니다.<br>
+                    The quick brown fox jumps over the lazy dog.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="font-row">
+        <div class="mdc-card">
+            <div class="font-sample-content">
+                <h2 class="mdc-typography--headline6">Noto Sans CJK</h2>
                 <p class="sample-text mdc-typography--body1 cjk">
                     這是CJK示例文字 / 这是CJK示例文字<br>
                     これはCJKサンプルテキストです / CJK 샘플 텍스트입니다<br>
@@ -246,7 +328,7 @@
             </div>
         </div>
     </div>
-
+    
     <script>
         mdc.autoInit();
 
@@ -296,6 +378,24 @@
             document.querySelectorAll('.user-text, .sample-text, .user-text2').forEach(el => {
                 el.style.fontWeight = weight;
             });
+        });
+    </script>
+    <script>
+        const slider = new mdc.slider.MDCSlider(document.querySelector('.mdc-slider'));
+        const fontSizeValue = document.getElementById('font-size-value');
+        const userText2Elements = document.querySelectorAll('.user-text2');
+
+        slider.listen('MDCSlider:input', () => {
+            const fontSize = slider.getValue();
+            fontSizeValue.textContent = fontSize;
+            userText2Elements.forEach(element => {
+                element.style.fontSize = `${fontSize}px`;
+            });
+        });
+
+        // Initialize the font size on page load
+        userText2Elements.forEach(element => {
+            element.style.fontSize = `${slider.getValue()}px`;
         });
     </script>
 </body>
